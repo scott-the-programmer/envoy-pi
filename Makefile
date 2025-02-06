@@ -4,7 +4,7 @@ build:
 
 .PHONY: build-image
 build-image:
-	docker build -t envoyproxy/envoy-pi:latest -f Dockerfile .
+	docker build --platform linux/arm64 -t envoyproxy/envoy-pi:latest -f Dockerfile . 
 
 .PHONY: push-image
 push-image:
